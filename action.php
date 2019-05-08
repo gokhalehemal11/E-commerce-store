@@ -282,13 +282,23 @@ if (isset($_POST["Common"])) {
 							</form>';
 					
 				}else if(isset($_SESSION["uid"])){
+
+					$link= "";
+					$sql2 = "SELECT a.product_id,a.product_title,a.product_price,a.instamojo,b.id,b.qty FROM products a,cart b WHERE a.product_id=b.p_id AND b.user_id='$_SESSION[uid]'";
+					$query2= mysqli_query($con,$sql2);
+					while ($row2=mysqli_fetch_array($query2)) {
+						$link= $row2["instamojo"];
+						/*print_r($link);*/
+
+					}
+					/*echo "<script>console.log('$query2');</script>";*/
 					//Paypal checkout form
+/*					print_r($link);*/
+
 					echo '
 						</form>
 
-						<form action="https://test.instamojo.com/@srs25121997/l772c3610425c48bb8879d5fa4de1b4bd/" method="get">
-							<input type="hidden" name="cmd" value="_cart">
-							<input type="hidden" name="upload" value="1">';
+						<form>';
 							  
 							$x=0;
 							$sql = "SELECT a.product_id,a.product_title,a.product_price,a.product_image,b.id,b.qty FROM products a,cart b WHERE a.product_id=b.p_id AND b.user_id='$_SESSION[uid]'";
@@ -303,13 +313,19 @@ if (isset($_POST["Common"])) {
 								}
 							  
 							echo   
-								'<input type="hidden" name="return" value="http://localhost/E-commerce/payment_success.php"/>
-					                <input type="hidden" name="notify_url" value="http://localhost/E-commerce/payment_success.php">
-									<input type="hidden" name="cancel_return" value="http://localhost/E-commerce/cancel.php"/>
-									<input type="hidden" name="currency_code" value="IND"/>
-									<input type="hidden" name="custom" value="'.$_SESSION["uid"].'"/>
-									<input style="float:right;margin-right:80px;" type="image" name="submit"
-										src="http://www.middlecreekmedicalcenter.com/wp-content/uploads/2016/08/Payment-Button.png" alt="Proceed To Payment">
+								'<a href= "'.$link.'" style="display: block;
+														    width: 155px;
+														    height: 35px;
+														    background: #4E9CAF;
+														    padding: 8px;
+														    text-align: center;
+														    border-radius: 5px;
+														    color: white;
+														    margin-top: 10px;
+    														font-weight: bold;
+    														float:right;
+    														margin-right:80px;"> 
+    									Ready to Checkout </a>
 								</form>';
 				}
 			}
