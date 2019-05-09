@@ -20,8 +20,8 @@
               <th>Order #</th>
               <th>Product Id</th>
               <th>Product Name</th>
-              <th>Quantity</th>
-              <th>Trx Id</th>
+<!--               <th>Quantity</th>
+ -->              <th>Trx Id</th>
               <th>Payment Status</th>
             </tr>
           </thead>

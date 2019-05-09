@@ -28,18 +28,18 @@
               Products
             </a>
           </li>
-          <li class="nav-item">
+<!--           <li class="nav-item">
             <a class="nav-link <?php echo ($page == 'brands.php') ? 'active' : ''; ?>" href="brands.php">
               <span data-feather="shopping-cart"></span>
               Brands
             </a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+<!--           <li class="nav-item">
             <a class="nav-link <?php echo ($page == 'categories.php') ? 'active' : ''; ?>" href="categories.php">
               <span data-feather="shopping-cart"></span>
               Categories
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link <?php echo ($page == 'customers.php') ? 'active' : ''; ?>" href="customers.php">
               <span data-feather="users"></span>
@@ -55,10 +55,10 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Hello <?php echo $_SESSION["admin_name"]; ?></h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group mr-2">
+<!--           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-          </div>
+          </div> -->
           <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
             <span data-feather="calendar"></span>
             This week

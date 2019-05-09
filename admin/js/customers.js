@@ -40,6 +40,7 @@ $(document).ready(function(){
 	}
 
 	function getCustomerOrders(){
+		console.log("hi");
 		$.ajax({
 			url : '../admin/classes/Customers.php',
 			method : 'POST',
@@ -59,8 +60,8 @@ $(document).ready(function(){
 								              '<td>'+ value.order_id +'</td>'+
 								              '<td>'+ value.product_id +'</td>'+
 								              '<td>'+ value.product_title +'</td>'+
-								              '<td>'+ value.qty +'</td>'+
-								              '<td>'+ value.trx_id +'</td>'+
+/*								              '<td>'+ value.qty +'</td>'+
+*/								              '<td>'+ value.trx_id +'</td>'+
 								              '<td>'+ value.p_status +'</td>'+
 								            '</tr>';
 

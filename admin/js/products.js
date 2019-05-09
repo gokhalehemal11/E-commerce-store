@@ -8,7 +8,7 @@ $(document).ready(function(){
 			method : 'POST',
 			data : {GET_PRODUCT:1},
 			success : function(response){
-				//console.log(response);
+				console.log(response);
 				var resp = $.parseJSON(response);
 				if (resp.status == 202) {
 
@@ -18,17 +18,18 @@ $(document).ready(function(){
 
 					if (productList) {
 						$.each(resp.message.products, function(index, value){
+
 							productHTML += '<tr>'+
-								              '<td>'+''+'</td>'+
+								              '<td>'+ ''+'</td>'+
 								              '<td>'+ value.product_title +'</td>'+
-								              '<td><img width="60" height="60" src="'value.product_image'"></td>'+
 								              '<td>'+ value.product_price +'</td>'+
+/*								              '<td>'+ value.product_title +'</td>'+
+								              '<td>'+ <img src=""> +'</td>'+
 								              '<td>'+ value.product_qty +'</td>'+
 								              '<td>'+ value.cat_title +'</td>'+
-								              '<td>'+ value.brand_title +'</td>'+
+								              '<td>'+ value.brand_title +'</td>'+*/
 								              '<td><a class="btn btn-sm btn-info edit-product" style="color:#fff;"><span style="display:none;">'+JSON.stringify(value)+'</span><i class="fas fa-pencil-alt"></i></a>&nbsp;<a pid="'+value.product_id+'" class="btn btn-sm btn-danger delete-product" style="color:#fff;"><i class="fas fa-trash-alt"></i></a></td>'+
-								            '</tr>';
-
+								            '</tr>';	
 						});
 
 						$("#product_list").html(productHTML);
@@ -99,13 +100,13 @@ $(document).ready(function(){
 		console.log(product);
 
 		$("input[name='e_product_name']").val(product.product_title);
-		$("select[name='e_brand_id']").val(product.brand_id);
+/*		$("select[name='e_brand_id']").val(product.brand_id);
 		$("select[name='e_category_id']").val(product.cat_id);
 		$("textarea[name='e_product_desc']").val(product.product_desc);
-		$("input[name='e_product_qty']").val(product.product_qty);
+		$("input[name='e_product_qty']").val(product.product_qty);*/
 		$("input[name='e_product_price']").val(product.product_price);
-		$("input[name='e_product_keywords']").val(product.product_keywords);
-		$("input[name='e_product_image']").siblings("img").attr("src", product.product_image);
+/*		$("input[name='e_product_keywords']").val(product.product_keywords);
+		$("input[name='e_product_image']").siblings("img").attr("src", product.product_image);*/
 		$("input[name='pid']").val(product.product_id);
 		$("#edit_product_modal").modal('show');
 
