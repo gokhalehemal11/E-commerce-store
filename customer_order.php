@@ -41,12 +41,12 @@ if(!isset($_SESSION["uid"])){
 				<div class="panel panel-default">
 					<div class="panel-heading"></div>
 					<div class="panel-body">
-						<h1>Customer Order details</h1>
+						<h1>Your Courses</h1>
 						<hr/>
 						<?php
 							include_once("db.php");
 							$user_id = $_SESSION["uid"];
-							$orders_list = "SELECT o.order_id,o.user_id,o.product_id,o.qty,o.trx_id,o.p_status,p.product_title,p.product_price,p.product_image FROM orders o,products p WHERE o.user_id='$user_id' AND o.product_id=p.product_id";
+							$orders_list = "SELECT o.order_id,o.user_id,o.product_id,o.qty,o.trx_id,o.p_status,p.product_title,p.product_price,p.product_image,p.vimeo FROM orders o,products p WHERE o.user_id='$user_id' AND o.product_id=p.product_id";
 							$query = mysqli_query($con,$orders_list);
 							if (mysqli_num_rows($query) > 0) {
 								while ($row=mysqli_fetch_array($query)) {
@@ -61,6 +61,19 @@ if(!isset($_SESSION["uid"])){
 													<tr><td>Product Price</td><td><b><?php echo "Rs ".$row["product_price"]; ?></b></td></tr>
 													<tr><td>Quantity</td><td><b><?php echo $row["qty"]; ?></b></td></tr>
 													<tr><td>Transaction Id</td><td><b><?php echo $row["trx_id"]; ?></b></td></tr>
+													<tr><td><a href= <?php echo $row["vimeo"]; ?> style="display: block;
+														    width: 155px;
+														    height: 35px;
+														    background: #4E9CAF;
+														    padding: 8px;
+														    text-align: center;
+														    border-radius: 5px;
+														    color: white;
+														    margin-top: 10px;
+    														font-weight: bold;
+    														float:right;
+    														"> 
+    									Watch Video </a></td></tr>	
 												</table>
 											</div>
 										</div>
@@ -78,27 +91,3 @@ if(!isset($_SESSION["uid"])){
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
