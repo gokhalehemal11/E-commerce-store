@@ -173,7 +173,7 @@ PreviousNext
 					</div>
 				</div>
 				<div class="panel panel-info">
-					<div class="panel-heading">Products</div>
+					<div class="panel-heading">Online Courses</div>
 					<div class="panel-body">
 						<div id="get_product">
 							<!--Here we get product jquery Ajax Request-->
@@ -318,6 +318,21 @@ chocolate order from home. she is happy to learn online.
   </a>
 </div>
 </section>
+<div class="col-md-1"></div>
+	<div class="container-fluid">
+		<div class="row">
+  				<h1>About The Coach</h1>
+			</div>
+  <div class="card" style="width: 18rem;">
+  <img src="https://cdn.glitch.com/71e6e663-a6b0-4641-aca8-21a592374319%2FWhatsApp%20Image%202019-04-22%20at%206.40.14%20PM.jpeg?1555942038217" style="  height: 250px; width: 250px;" class="card-img-top">
+  <div class="card-body">
+    <h3 class="card-title">Arpita</h3>
+    <p class="card-text">A girl with Experience in Arts and Cooking. She is willing to share her Knowledge with world and make a difference.</p>
+    <hr size="15">
+  </div>
+</div>
+		</div>
+	</div>
 				<div class="panel-footer">&copy; 2019 <br> All Rights Reserved | <br> Arpita Arts and Cooking Classes, Pune</div>
 				</div>
 			</div>
@@ -326,51 +341,3 @@ chocolate order from home. she is happy to learn online.
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
