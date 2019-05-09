@@ -63,7 +63,7 @@ echo "<script>console.log('$c_amt');</script>";
 						<div class="navbar navbar-inverse navbar-fixed-top">
 							<div class="container-fluid">	
 								<div class="navbar-header">
-									<a href="#" class="navbar-brand">Arpita Arts and Cooking Clasees</a>
+									<a href="#" class="navbar-brand">Arpita Arts and Cooking Classes</a>
 								</div>
 								<ul class="nav navbar-nav navbar-right">
 									<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
@@ -82,11 +82,11 @@ echo "<script>console.log('$c_amt');</script>";
 									<div class="panel panel-default">
 										<div class="panel-heading"></div>
 										<div class="panel-body">
-											<h1>Thankyou </h1>
+											<h1>Thank you </h1>
 											<hr/>
 											<p>Hello <?php echo "<b>".$_SESSION["name"]."</b>"; ?>,Your payment process is 
 											successfully completed and your Transaction id is <b><?php echo $trx_id; ?></b><br/>
-											you can continue your Shopping <br/></p>
+											you can continue your Shopping <br/> Check Your Course in Orders <br/> Have a Nice Day !</p>
 											<a href="index.php" class="btn btn-success btn-lg">Continue Shopping</a>
 										</div>
 										<div class="panel-footer"></div>
@@ -110,52 +110,3 @@ echo "<script>console.log('$c_amt');</script>";
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
