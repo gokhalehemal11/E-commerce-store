@@ -23,10 +23,10 @@ if (isset($_GET["register"])) {
 			<div class="navbar-header">
 				<a href="#" class="navbar-brand">Welcome to Arpita Arts and Cooking classes</a>
 			</div>
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav navbar-right">
 				<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>Home</a></li>
-				<li><a href="index.php"><span class="glyphicon glyphicon-modal-window"></span>Product</a></li>
-			</ul>
+<!-- 				<li><a href="index.php"><span class="glyphicon glyphicon-modal-window"></span>Product</a></li>
+ -->			</ul>
 		</div>
 	</div>
 	<p><br/></p>
@@ -117,25 +117,3 @@ if (isset($_GET["register"])) {
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
